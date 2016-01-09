@@ -1,0 +1,4 @@
+sun is red
+sea is blue
+forest is green
+sky is blue
