@@ -25,12 +25,12 @@ function Form ($Control, [hashtable] $Properties)
 }
 
 # Drawingヘルパ関数
-function Drawing ([System.Windows.Forms.Control]$Control, $Constructor, [hashtable]$Properties)
+function Drawing ([string] $Control, $Constructor, $Properties)
 {
     $c = New-Object "Drawing.$Control" $Constructor
-    if ($Properties)
+    if ($Properties.Count)
     {
-        foreach($prop in $Properties)
+        foreach($prop in $Properties.Keys)
         {
             $c.$prop = $Properties[$prop]
         }
